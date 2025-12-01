@@ -1,0 +1,215 @@
+.upload-form {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.mode-selector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  background: var(--bg-secondary);
+  padding: 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 11px 18px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mode-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.mode-btn.active {
+  background: var(--bg-card);
+  color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.mode-btn .icon {
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.6;
+}
+
+.form-group input[type="file"] {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: all var(--transition);
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--border-light);
+}
+
+.file-name {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--accent);
+  color: #0f0f0f;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 6px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(201, 169, 98, 0.25);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(199, 80, 80, 0.1);
+  color: #e57373;
+  padding: 13px 15px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  border-left: 3px solid var(--error);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .upload-form {
+    padding: 24px 20px;
+  }
+
+  .mode-selector {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mode-btn {
+    padding: 12px;
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+  }
+
+  .submit-btn {
+    padding: 14px 20px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .upload-form {
+    padding: 20px 16px;
+    border-radius: var(--radius);
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 13px 16px;
+  }
+}
