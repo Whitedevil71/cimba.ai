@@ -4,14 +4,14 @@ An intelligent web application that automatically transcribes meeting audio and 
 
 ## Features
 
-- 🎤 Audio transcription using Whisper API
-- 📝 Text transcript processing
-- 🤖 AI-powered summarization with GPT-4
-- ✅ Automatic extraction of key decisions
-- 🎯 Action items with responsible persons
-- 📥 Downloadable meeting reports
-- 📚 Meeting history tracking
-- 📱 Responsive design
+-  Audio transcription using Whisper API
+-  Text transcript processing
+-  AI-powered summarization with GPT-4
+-  Automatic extraction of key decisions
+-  Action items with responsible persons
+-  Downloadable meeting reports
+-  Meeting history tracking
+-  Responsive design
 
 ## Tech Stack
 
